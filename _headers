@@ -2,6 +2,3 @@
   X-Robots-Tag: noindex, nofollow, noarchive
   X-Content-Type-Options: nosniff
   Referrer-Policy: no-referrer
-
-/assets/videos/*
-  Cache-Control: public, max-age=86400
