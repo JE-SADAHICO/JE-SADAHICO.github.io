@@ -102,3 +102,12 @@ const navObserver = new IntersectionObserver(entries => {
   navLinks.forEach(link => link.setAttribute('aria-current', String(link.hash === '#' + target)));
 }, { rootMargin:'-48px 0px -65% 0px', threshold:0 });
 document.querySelectorAll('main > section').forEach(section => navObserver.observe(section));
+
+// Cloudflare Web Analytics (cookie-free). Only on the public domain, so local preview, QA and PDF runs are not counted.
+if (location.hostname === 'leejeongeon.com') {
+  const beacon = document.createElement('script');
+  beacon.defer = true;
+  beacon.src = 'https://static.cloudflareinsights.com/beacon.min.js';
+  beacon.dataset.cfBeacon = JSON.stringify({ token: '1604106cec6041908a625551f539f89a' });
+  document.head.append(beacon);
+}
