@@ -93,7 +93,7 @@ initComparisons();
 initDemos();
 
 const navLinks = [...document.querySelectorAll('.nav__list a')];
-const navGroups = { profile:'about', pack:'projects', ajas:'projects', 'kais-problem':'projects', kais:'projects', draw:'rnd', closing:'about' };
+const navGroups = { projects:'kais', ajas:'kais', rnd:'kais', pack:'kais', architecture:'overview', about:'growth', closing:'growth' };
 const navObserver = new IntersectionObserver(entries => {
   const visible = entries.filter(entry => entry.isIntersecting);
   if (!visible.length) return;
