@@ -998,3 +998,5 @@ hr { border: 0; border-top: 1px solid var(--c-ink-100); margin: 0; }
 .trace-idea{margin-bottom:var(--s-8)}@media print{.trace-idea{margin-bottom:8mm}}
 .trace-idea .kais-steps li:nth-child(n+3){padding-bottom:0}
 .ajas-idea{margin-bottom:var(--s-8)}@media print{.ajas-idea{margin-bottom:8mm}}
+.plot-idea{margin-bottom:var(--s-8)}.plot-details{margin-top:var(--s-6)}.plot-details h3 small{display:block;margin-bottom:6px;font-family:var(--f-mono);font-size:var(--fs-micro);font-weight:400;letter-spacing:.14em;color:var(--c-accent)}.plot-details .state-list{margin-top:0}@media print{.plot-idea{margin-bottom:8mm}}
+.kais-scope dd:has(.scope-state){display:flex;justify-content:space-between;align-items:baseline;gap:20px}.scope-state{flex:none;font-size:var(--fs-small);color:var(--c-ink-500)}.plot-details{grid-template-columns:1fr}.plot-details p{max-width:72ch}@media(max-width:760px){.kais-scope dd:has(.scope-state){flex-direction:column;gap:2px}}
