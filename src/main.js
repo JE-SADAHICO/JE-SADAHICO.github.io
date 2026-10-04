@@ -111,3 +111,28 @@ if (location.hostname === 'leejeongeon.com') {
   beacon.dataset.cfBeacon = JSON.stringify({ token: '1604106cec6041908a625551f539f89a' });
   document.head.append(beacon);
 }
+
+// Closing: click the mail address to copy it, with a short confirmation in place of the hint.
+document.querySelectorAll('[data-copy]').forEach(button => {
+  const hint = button.querySelector('.closing-copy');
+  const idle = hint.textContent;
+  let timer;
+  button.addEventListener('click', async () => {
+    let ok = true;
+    try { await navigator.clipboard.writeText(button.dataset.copy); }
+    catch {
+      // Clipboard API is unavailable on insecure origins or when denied; fall back to a hidden field.
+      const field = document.createElement('textarea');
+      field.value = button.dataset.copy;
+      field.style.cssText = 'position:fixed;opacity:0';
+      document.body.append(field);
+      field.select();
+      ok = document.execCommand('copy');
+      field.remove();
+    }
+    hint.textContent = ok ? '복사됨' : '복사 실패';
+    button.classList.toggle('is-copied', ok);
+    clearTimeout(timer);
+    timer = setTimeout(() => { hint.textContent = idle; button.classList.remove('is-copied'); }, 1800);
+  });
+});
