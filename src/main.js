@@ -1,10 +1,11 @@
 import { demos } from './media.js';
 
 // Strings set from script. The page language comes from <html lang>; the Japanese page is generated from index.html.
+const lang = document.documentElement.lang === 'ja' ? 'ja' : 'ko';
 const text = {
   ko: { before: '가공 전', after: '가공 후', video: '기능 구현 영상', play: '영상 재생', preparing: '영상 준비 중', preparingLong: '영상을 준비하고 있습니다…', reload: '영상 다시 불러오기', reloadShort: '다시 불러오기', watch: '전체 구현 영상 보기', watchAlt: '클릭하여 전체 구현 영상 보기', qr: '구현 영상 QR 코드', copied: '복사됨', copyFailed: '복사 실패' },
   ja: { before: '加工前', after: '加工後', video: '機能実装動画', play: '動画を再生', preparing: '動画を準備中', preparingLong: '動画を準備しています…', reload: '動画を再読み込み', reloadShort: '再読み込み', watch: '実装動画を見る', watchAlt: 'クリックして実装動画を見る', qr: '実装動画 QRコード', copied: 'コピーしました', copyFailed: 'コピー失敗' },
-}[document.documentElement.lang === 'ja' ? 'ja' : 'ko'];
+}[lang];
 
 // Reusable on TRACE, AJAS and PLOT. Range inputs support pointer, touch and keyboard.
 export function initComparisons(root = document) {
@@ -22,8 +23,10 @@ export function initComparisons(root = document) {
 }
 export function initDemos(root = document) {
   root.querySelectorAll('[data-demo]').forEach(component => {
-    const media = demos[component.dataset.demo];
-    if (!media) return;
+    const entry = demos[component.dataset.demo];
+    if (!entry) return;
+    // The Japanese page uses the entry's `ja` files where they exist.
+    const media = { ...entry, ...entry[lang] };
     const screen = component.querySelector('.demo-screen');
     const poster = screen.querySelector('img');
     poster.src = media.poster;
