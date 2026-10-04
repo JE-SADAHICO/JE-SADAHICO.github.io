@@ -1,0 +1,202 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow,noarchive"><meta name="referrer" content="no-referrer"><meta name="description" content="LEE JEONGEON — Engineering Automation Portfolio"><title>FUTURE — Engineering Automation Platform | LEE JEONGEON</title><link rel="icon" href="data:,"><link rel="stylesheet" href="/styles.css"><script type="module" src="/src/main.js"></script><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&display=swap"></head><body><a class="skip-link" href="#main">本文へスキップ</a><nav class="nav" aria-label="セクション移動"><div class="wrap nav__inner"><a class="nav__brand" href="#cover">FUTURE <span>/ LEE JEONGEON</span></a><ul class="nav__list"><li><a href="#impact">Adoption</a></li><li><a href="#kais">Projects</a></li><li><a href="#overview">Platform</a></li><li><a href="#growth">About</a></li></ul><div class="nav__lang" role="group" aria-label="言語"><a class="nav__lang-link" href="/" lang="ko" data-short="KO">한국어</a><a class="nav__lang-link" href="/jp/" lang="ja" data-short="JA" aria-current="true">日本語</a></div></div></nav><main id="main"><section class="section cover" id="cover">
+  <div class="wrap">
+
+    <div class="cover__body">
+      <div class="cover__text">
+        <img class="cover__wordmark" src="/assets/images/future-wordmark.svg" alt="FUTURE">
+        <h1 class="cover__title">人の判断を、<br>ソフトウェアへ。</h1>
+        <p class="cover__sub">BIM Engineering Platform</p>
+        <p class="cover__lead">現場で課題を見つけ、<br>設計 · 開発 · 配布 · 運用まで自ら行いました。</p>
+
+        <div class="cover__meta">
+          <p class="cover__person">イ・ジョンオン <span>LEE JEONGEON</span></p>
+          <p class="note">BIM / CAD Automation · Digital Engineering</p>
+        </div>
+      </div>
+
+      <figure class="cover__hero">
+        <div class="cover__window">
+          <span class="cover__window-bar" aria-hidden="true"><i></i><i></i><i></i></span>
+          <img data-asset="future-main" src="/assets/images/future-main-login.png"
+               alt="FUTURE ログイン画面">
+        </div>
+      </figure>
+    </div>
+
+    <nav class="cover__modules" aria-label="モジュールへ移動">
+      <span class="cover__modules-k">Modules</span>
+      <a href="#kais"><i class="dot dot--half"></i>KAIS<small>溶接開先の自動モデリング</small></a>
+      <a href="#projects"><i class="dot dot--full"></i>TRACE<small>ダイアフラム自動チェック</small></a>
+      <a href="#ajas"><i class="dot dot--half"></i>AJAS<small>継手基準図の自動作図</small></a>
+      <a href="#rnd"><i class="dot"></i>PLOT<small>自動作図 R&amp;D</small></a>
+      <a href="#pack"><i class="dot dot--full"></i>PACK<small>PDF自動編集</small></a>
+    </nav>
+
+    
+
+  </div>
+</section><section class="section" id="impact"><div class="wrap"><header class="section__head"><div class="section__id"><span class="section__num">02</span><span class="eyebrow">Adoption</span></div><h2 class="section__title">実際の利用実績</h2><p class="section__sub">使用義務がなくても、実務者が自発的に繰り返し利用しました。</p></header><div class="impact-numbers"><div><strong>19<span>名</span></strong><h3>実利用者</h3><p>対象モデラー約30名のうち</p></div><div><strong>4,562<span>件</span></strong><h3>累計利用イベント</h3><p>集計対象: TRACE / DART / PACK</p></div><div><strong>603<span>時間18分</span></strong><h3>累計利用時間</h3><p>ツール利用時間 · 運用ログ基準</p></div></div><p class="feature-statement impact-summary">自ら開発・配布したツールが、<br>チームの実務で繰り返し使われました。</p></div></section><section class="section section--panel" id="kais"><div class="wrap"><header class="section__head"><div class="section__id"><span class="section__num">03</span><span class="eyebrow">Projects</span></div><h2 class="section__title">KAIS<span class="section__tagline">立体の問題を、断面の計算へ。</span></h2><p class="section__sub">◐ In Practice · 個人実務検証 | 溶接開先の自動モデリング</p></header><div class="problem-layout kais-idea"><div><p class="feature-statement">人が断面を見て判断するように、<br>コンピュータにも断面で<br class="m-only">計算させました。</p><p>部材の向きや接合条件が変わるたびに、作業者は角ごとに断面を作成し、板厚 · 角度 · 加工位置を確認する必要がありました。複雑な立体をそのまま扱う代わりに、加工に必要な関係が現れる断面を決め、その上で計算するように変えました。</p><p class="kais-weld"><span>対応溶接</span>完全溶込み · 部分溶込み · 隅肉</p></div><ol class="kais-steps"><li><span>01 · Read</span><b>3Dで関係を読み取り</b><p>部材形状と面の向き、相手部材との接合関係を読み取ります。</p></li><li><span>02 · Solve</span><b>2D断面で計算し</b><p>溶接条件に合う断面へ投影し、加工に必要な方向と交差関係を計算します。</p></li><li><span>03 · Apply</span><b>再び3Dモデルへ反映します</b><p>計算結果を立体の加工形状に変換し、実際のBIMモデルに適用します。</p></li></ol></div><div class="kais-evidence"><figure class="media feedback-video" data-demo="kais-demo"><div class="demo-screen"><img src="/assets/images/kais-poster.svg" width="1600" height="900" alt="KAIS 実装動画"><p class="demo-empty">KAIS 実装動画 · 準備中</p></div></figure><div class="geometry-triptych"><figure><figcaption><b>01 Read</b> 加工前</figcaption><img src="/assets/images/kais-before.png" width="1472" height="822" alt="KAIS BEFORE · 加工前"></figure><figure><figcaption><b>02 Solve</b> 計算の可視化</figcaption><img src="/assets/images/kais-debug.png" width="1472" height="822" alt="KAIS GEOMETRY · 計算の可視化"></figure><figure><figcaption><b>03 Apply</b> 加工後</figcaption><img src="/assets/images/kais-after.png" width="1472" height="822" alt="KAIS AFTER · 加工後"></figure></div><dl class="kais-scope"><div><dt>ユーザー選択</dt><dd>溶接条件と加工する面（必要に応じて開先方向）</dd></div><div><dt>自動処理</dt><dd>相手部材 · 面の探索、加工形状の計算、モデル反映</dd></div><div><dt>例外処理</dt><dd>相手面の自動探索が難しい場合は、該当する面を直接指定して処理を続けます。</dd></div></dl></div></div></section><section class="section" id="projects"><div class="wrap"><header class="section__head"><div class="section__id"><span class="section__num">04</span><span class="eyebrow">Projects</span></div><h2 class="section__title">TRACE<span class="section__tagline">人の目は、確認が必要なところへ。</span></h2><p class="section__sub">● Deployed · チーム配布 | ダイアフラム自動チェック</p></header><div class="problem-layout kais-idea trace-idea"><div><p class="feature-statement">入力された値だけを<br class="m-only">確認するのではありません。<br>どう入力されるべきかを<br class="m-only">計算します。</p><p>ダイアフラムを支持する部材と、それに接する部材の形状 · 接合関係を分析し、プロジェクト基準に合う位置 · 板厚 · 材質の条件を算出します。</p><p>プロジェクトごとに判定基準が異なるため、基準別の検査ロジックを個別に実装しました。</p><p class="kais-weld"><span>検査項目</span>位置 · 板厚 · 材質</p></div><ol class="kais-steps"><li><span>01 · Read</span><b>幾何解析</b><p>周辺部材の形状 · 向きと接合関係を分析します。</p></li><li><span>02 · Rule</span><b>案件別ルール</b><p>位置 · 板厚 · 材質の判定ルールをプロジェクトごとに分けて適用します。</p></li><li><span>03 · Solve</span><b>要求状態の算出</b><p>幾何関係とプロジェクト基準から、該当ダイアフラムに必要な位置·板厚·材質を算出します。</p></li><li><span>04 · Verify</span><b>実入力の検証</b><p>要求状態と現在のモデルを照合し、不一致と判定不可の対象を表示します。</p></li></ol></div><figure class="media demo-large" data-demo="trace-demo"><div class="demo-screen"><img src="/assets/images/trace-poster.svg" width="1600" height="900" alt="TRACE 実装動画"><p class="demo-empty">TRACE 実装動画 · 準備中</p></div></figure><div class="trace-result"><p class="trace-bridge">計算はTRACEが、確認が必要なところは人へ。</p><dl class="kais-scope"><div><dt>確認対象</dt><dd>プロジェクト基準と一致しない場合、および自動判定が難しい部材</dd></div><div><dt>確認方法</dt><dd>ワンクリックで、確認が必要な部材の位置へ自動移動</dd></div></dl></div><div class="metricbar"><span class="metricbar__k">検査時間</span><span class="metricbar__v"><del>約30秒</del> <em>→</em> <b>約1.5秒</b></span><span class="metricbar__v metricbar__v--text">同じ検査項目、ダイアフラム1枚あたり平均 · 約20倍</span></div></div></section><section class="section section--panel" id="ajas"><div class="wrap"><header class="section__head"><div class="section__id"><span class="section__num">05</span><span class="eyebrow">Projects</span></div><h2 class="section__title">AJAS<span class="section__tagline">決まった答えは、コンピュータへ。</span></h2><p class="section__sub">◐ In Practice · 個人実務検証 | 継手基準図の自動作図</p></header><div class="problem-layout kais-idea ajas-idea"><div><p class="feature-statement">どこを測り、何を記入するか。<br>その判断から<br class="m-only">自動化しました。</p><p>継手基準図を作成するたびに、作業者は継手の種類を確認し、寸法点を取り、ボルト数量とマークを図面に記入する必要がありました。この作業手順を種類別の作図ルールに置き換え、複数の継手を選択すると、それぞれの種類に合わせて自動で作成します。</p><p class="kais-weld"><span>作図項目</span>寸法 · 部材マーク · ボルトマーク · 追加断面</p></div><ol class="kais-steps"><li><span>01 · Read</span><b>継手の種類を判別し</b><p>継手の実形状の幾何情報をもとに、どの作図ルールを適用するかを決めます。</p></li><li><span>02 · Solve</span><b>図面に記入する内容を決め</b><p>種類ごとに必要な寸法と部材 · ボルト情報をモデルから算出します。</p></li><li><span>03 · Apply</span><b>既存の様式に合わせて描きます</b><p>種類別のルールに従って寸法とマークを配置し、必要な追加断面を生成します。</p></li></ol></div><figure class="media demo-large" data-demo="ajas-demo"><div class="demo-screen"><img src="/assets/images/ajas-after.svg" width="1600" height="1000" alt="AJAS 実装動画"><p class="demo-empty">AJAS 実装動画 · 準備中</p></div></figure><div class="trace-result"><p class="trace-bridge">様式はそのまま。繰り返しの作図は自動で。</p><dl class="kais-scope"><div><dt>ユーザー選択</dt><dd>作図する継手</dd></div><div><dt>一括処理</dt><dd>種類の異なる継手も一度に選択して連続作図</dd></div></dl></div><div class="metricbar"><span class="metricbar__k">実務適用</span><span class="metricbar__v"><b>累計 約150枚</b></span><span class="metricbar__v metricbar__v--text">実務で使う継手基準図の種類に対応</span></div></div></section><section class="section" id="rnd"><div class="wrap"><header class="section__head"><div class="section__id"><span class="section__num">06</span><span class="eyebrow">R&D</span></div><h2 class="section__title">PLOT<span class="section__tagline">決まっていない答えは、人から。</span></h2><p class="section__sub">○ R&D · 図面要素と断面の自動配置</p></header><div class="problem-layout kais-idea plot-idea"><div><p class="feature-statement">配置の正解は一つではありません。<br>しかし、好き勝手に<br class="m-only">配置することはできません。</p><p>寸法は何を測っているのか、マークはどの部材を指しているのかを保つ必要があります。単に重ならないように動かすだけでは不十分です。</p><p>PLOTは人と同じように、図面要素の意味と役割を踏まえて移動可能な範囲を見分け、周辺形状や他の要素の配置を考慮して位置を計算します。</p><p class="kais-weld"><span>配置対象</span>寸法 · マーク · 断面</p></div><ol class="kais-steps"><li><span>01 · Read</span><b>何を表しているかを読み取り</b><p>寸法 · マークと対象部材の関係を把握し、配置を計算するための2D情報に整理します。</p></li><li><span>02 · Solve</span><b>動かせる範囲の中で配置し</b><p>要素ごとの移動制約を守りながら、周辺形状 · 寸法 · マークとの重なりを減らす位置を計算します。</p></li><li><span>03 · Apply</span><b>確認した結果を図面へ反映します</b><p>計算された配置をユーザーが確認 · 調整し、実際のBIM図面に適用します。</p></li></ol></div><figure class="media demo-large" data-demo="plot-demo"><div class="demo-screen"><img src="/assets/images/plot-demo-ko-poster.png" width="1920" height="1080" alt="PLOT 実装動画"><p class="demo-empty">PLOT 実装動画 · 準備中</p></div></figure><div class="trace-result"><p class="trace-bridge">守るべき条件は計算で、選べる配置は人へ。</p><dl class="kais-scope"><div><dt>断面内部</dt><dd>寸法とマークの関係 · 移動制約を考慮した生成と配置</dd></div><div><dt>図面全体</dt><dd>図面上で断面を置ける領域を自動で計算し、その中に断面を配置 · 命名</dd></div></dl></div><div class="project-details plot-details"><div><h3><small>研究の方向</small>人の修正を、次の配置の手がかりに。</h3><p>制約を満たす配置も、ユーザーの作業スタイルによって変わり得ます。ユーザーが調整した結果から配置の好みを読み取ってアルゴリズムに反映し、配置ルールそのものをユーザーに合わせて変える方法を研究しています。</p></div></div></div></section><section class="section section--panel" id="pack"><div class="wrap"><header class="section__head"><div class="section__id"><span class="section__num">07</span><span class="eyebrow">Projects</span></div><h2 class="section__title">PACK<span class="section__tagline">繰り返す提出準備は、一度で。</span></h2><p class="section__sub">● Deployed · チーム配布 | PDF図面の提出準備を自動化</p></header><p class="pack-editions"><span><b>変更表示版</b> 修正箇所を赤色で表示</span><span><b>黒字版</b> 全体を黒色で出力</span></p><div class="pack-visual"><article class="pack-lane manual"><h3>従来 · 手作業</h3><ol><li><span class="pack-number">1</span><div class="pack-stage"><div class="pack-objects"><div class="paper-node"><b>PDF</b><span>黒字版</span></div><span class="pack-plus">+</span><div class="paper-node"><b>PDF</b><span>変更表示版</span></div></div><p class="pack-timing">PDF出力 25分 × 2回 = <b>50分</b></p></div></li><li><span class="pack-number">2</span><div class="pack-stage"><div class="pack-objects"><div class="process-node">CADで<br>表紙修正</div><span class="pack-plus">→</span><div class="paper-node"><b>PDF</b><span>変換</span></div></div><p class="pack-timing">CAD修正·PDF変換 = <b>10分</b></p></div></li><li><span class="pack-number">3</span><div class="pack-stage"><div class="pack-objects"><div class="process-node">手動整列<span>黒字版</span></div><span class="pack-plus">+</span><div class="process-node">手動整列<span>変更表示版</span></div><span class="repeat-count">2回</span></div><p class="pack-timing">手動整列 30分 × 2回 = <b>60分</b></p></div></li></ol><p class="lane-total">作業時間 <b>約2時間</b><span>梁図面100枚基準</span></p></article><div class="pack-transition" aria-hidden="true"><span>→</span></div><article class="pack-lane automated"><h3>PACK</h3><ol><li><span class="pack-number">1</span><div class="pack-stage"><div class="pack-objects"><div class="paper-node"><b>PDF</b><span>変更表示版のみ</span></div><span class="pack-flag">1回出力</span></div><p class="pack-timing">PDF出力 = <b>25分</b></p></div></li><li><span class="pack-number">2</span><div class="pack-stage"><div class="pack-objects"><div class="process-node">PACKで<br>表紙を直接修正</div><span class="pack-flag">CAD不要</span></div><p class="pack-timing">表紙修正 = <b>1分</b></p></div></li><li><span class="pack-number">3</span><div class="pack-stage"><div class="pack-objects compact"><div class="process-node">順序<br>自動整列</div><div class="process-node">黒字版<br>自動変換</div><div class="process-node">分割<br>自動保存</div></div><p class="pack-timing">自動処理 = <b>5分</b></p></div></li></ol><p class="lane-total">作業時間 <b>約30分</b><span>梁図面100枚基準</span></p></article></div><div class="pack-features"><h3>Features</h3><ol><li><span>01</span><b>表紙修正</b><p>PACK上のPDF編集で表紙を直接修正</p></li><li><span>02</span><b>図面順の整列</b><p>提出するPDF図面の順序を自動で並べ替え</p></li><li><span>03</span><b>黒字変換·確認</b><p>変更表示版を黒字版に変換し、結果を確認</p></li><li><span>04</span><b>修正図面の差し替え</b><p>全図面のうち修正された図面だけを選んで差し替え</p></li><li><span>05</span><b>図面ごとのバラ分け保存</b><p>まとまったPDFを図面1枚ずつに分けて保存</p></li><li><span>06</span><b>図面リストの自動作成</b><p>提出する図面のリストを自動で作成</p></li><li><span>07</span><b>BIM図面の縮尺整理</b><p>BIMに接続して図面の縮尺を自動で整理</p></li></ol></div><div class="pack-screens"><figure><img src="/assets/images/pack-screen-black.png" width="2040" height="1400" loading="lazy" alt="PACK 黒字変換·確認画面"><figcaption><b>03</b>黒字変換·確認</figcaption></figure><figure><img src="/assets/images/pack-screen-replace.png" width="2040" height="1400" loading="lazy" alt="PACK 修正図面の差し替え画面"><figcaption><b>04</b>修正図面の差し替え</figcaption></figure></div></div></section><section class="section" id="overview">
+  <div class="wrap">
+
+    <header class="section__head">
+      <div class="section__id"><span class="section__num">08</span><span class="eyebrow">Overview</span></div>
+      <h2 class="section__title">単体マクロではなく、ひとつのプラットフォーム</h2>
+      <p class="section__sub">モジュール構成と現在の状態</p>
+    </header>
+
+    <div class="modmap">
+      <div class="modmap__group">
+        <p class="modmap__k">MODEL CHECK</p>
+        <p class="modmap__item"><span class="status status--deployed"><i class="status__dot"></i></span><span class="modmap__name">TRACE</span><span class="modmap__note">ダイアフラム自動チェック</span></p>
+        <p class="modmap__item"><span class="status status--deployed"><i class="status__dot"></i></span><span class="modmap__name">GRACE</span><span class="modmap__note">開先 · ルートギャップ自動チェック</span></p>
+      </div>
+      <div class="modmap__group">
+        <p class="modmap__k">AUTOMATIC MODELING</p>
+        <p class="modmap__item"><span class="status status--practice"><i class="status__dot"></i></span><span class="modmap__name">KAIS</span><span class="modmap__note">溶接開先の自動モデリング</span></p>
+      </div>
+      <div class="modmap__group">
+        <p class="modmap__k">Drawing</p>
+        <p class="modmap__item"><span class="status status--practice"><i class="status__dot"></i></span><span class="modmap__name">AJAS</span><span class="modmap__note">継手基準図の自動作図</span></p>
+        <p class="modmap__item"><span class="status status--deployed"><i class="status__dot"></i></span><span class="modmap__name">DART</span><span class="modmap__note">図面編集の一括処理</span></p>
+      </div>
+      <div class="modmap__group">
+        <p class="modmap__k">Document</p>
+        <p class="modmap__item"><span class="status status--deployed"><i class="status__dot"></i></span><span class="modmap__name">PACK</span><span class="modmap__note">PDF自動編集</span></p>
+      </div>
+      <div class="modmap__group">
+        <p class="modmap__k">Assist</p>
+        <p class="modmap__item"><span class="status status--practice"><i class="status__dot"></i></span><span class="modmap__name">MATE</span><span class="modmap__note">モデリング作業の補助</span></p>
+      </div>
+      <div class="modmap__group">
+        <p class="modmap__k">R&amp;D</p>
+        <p class="modmap__item modmap__item--rnd"><span class="status status--rnd"><i class="status__dot"></i></span><span class="modmap__name">PLOT</span><span class="modmap__note">自動作図 R&amp;D</span></p>
+      </div>
+    </div>
+
+    <ul class="legend">
+      <li><span class="status status--deployed"><i class="status__dot"></i>Deployed</span><em>チーム配布 · 実運用</em></li>
+      <li><span class="status status--practice"><i class="status__dot"></i>In Practice</span><em>実務適用 · 個人検証</em></li>
+      <li><span class="status status--rnd"><i class="status__dot"></i>R&amp;D</span><em>設計 · PoC</em></li>
+    </ul>
+
+  </div>
+</section><section class="section section--panel" id="architecture"><div class="wrap"><header class="section__head"><div class="section__id"><span class="section__num">09</span><span class="eyebrow">Architecture</span></div><h2 class="section__title">BIM APIと計算エンジンの分離</h2><p class="section__sub">BIM連携と計算を分離し、検証は独立して、実行は統合して</p></header><div class="ar-top"><div class="arch-story"><p class="feature-statement">計算は独立して開発し、<br>実行と状態は共通の仕組みで管理します。</p><p>FUTUREはBIM APIと計算ロジックを分離し、プログラム連携部はモデルへのアクセスとデータ変換に専念し、計算エンジンはBIMから独立して開発 · 検証できるように構成しました。</p><p>ジョブの実行は共通の仕組みで調整し、実行中の状態は一元管理して複数の画面へ一貫して伝えます。</p></div><div class="ar-diagram" role="img" aria-label="FUTUREアプリケーションのユーザー画面が実行要求の調整を経て、Tekla Structures環境の連携モジュールへ実行を要求し、進行状態と結果はジョブ状態の一元管理が集約して複数の画面へ伝えます。連携モジュールはBIMモデルにアクセスし、BIMに依存しない計算エンジンと形状·属性データおよび計算結果をやり取りします。他のBIMへの拡張は設計段階です。"><section class="ar-panel ar-panel--app"><h3>FUTURE<small>(外部アプリケーション)</small></h3><div class="ar-card "><svg class="ar-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="7" r="4"/><path d="M3 22v-3c0-8 18-8 18 0v3z"/></svg><div><b>ユーザー画面</b><span>機能選択 · 実行要求 · 結果確認</span></div></div><i class="ar-ln ar-ln--d ar-down" aria-hidden="true"></i><div class="ar-card "><svg class="ar-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="5"/><rect x="3" y="10" width="18" height="5"/><rect x="3" y="17" width="18" height="4"/></svg><div><b>実行要求の調整</b><span>ジョブ登録 · 順序管理 · キャンセル要求</span></div></div><i class="ar-ln ar-ln--d ar-down" aria-hidden="true"></i><div class="ar-card "><svg class="ar-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="4"/><path d="M3 5v14c0 5 18 5 18 0V5M3 12c0 5 18 5 18 0"/></svg><div><b>ジョブ状態の一元管理</b><span>進行 · 完了 · エラー状態の整理<br>複数のUIへ伝達</span></div></div></section><div class="ar-link" aria-hidden="true"><span class="ar-conn ar-conn--out">実行要求<i class="ar-ln ar-ln--r"></i></span><span class="ar-conn ar-conn--back">進行状態<i class="ar-ln ar-ln--l"></i>結果返却</span></div><section class="ar-panel ar-panel--bim"><h3>Tekla Structures<small>(実行環境)</small></h3><div class="ar-bim"><div class="ar-c1"><div class="ar-card ar-hot"><svg class="ar-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6l9-5 9 5v12l-9 5-9-5zM3 6l9 5 9-5M12 11v12"/></svg><div><b>連携モジュール (Plugin)</b><span>FUTUREの実行要求を受け<br>モデル · 図面機能を処理</span></div></div></div><i class="ar-ln ar-ln--h ar-h" aria-hidden="true"></i><div class="ar-c2"><div class="ar-card "><svg class="ar-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21V8l8-5 8 5v13M4 21h16M9 21V11M15 21V11M9 14h6"/></svg><div><b>BIMモデル</b><span>モデルアクセス<br>部材の取得 · 修正<br>図面生成など</span></div></div></div><div class="ar-v" aria-hidden="true"><span>形状 · 属性データ<i class="ar-ln ar-ln--d"></i></span><span><i class="ar-ln ar-ln--u"></i>計算結果</span></div><div></div><div></div><div class="ar-c1"><div class="ar-card ar-core"><svg class="ar-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M1 12h4M19 12h4M4 4l3 3M17 17l3 3M4 20l3-3M17 7l3-3"/></svg><div><b>BIM非依存の計算エンジン</b><span>幾何計算 · アルゴリズム · 業務ルール<br>(全モジュール共通で使用)</span></div></div></div><i></i><div class="ar-c2"><div class="ar-card ar-plan"><div><b>他のBIMへの拡張</b><span>プログラム別に連携部を分離<br>(設計段階)</span></div></div></div></div></section></div></div><section class="ar-test"><div class="ar-test__head"><h3>テスト体制<small>開発 · 検証</small></h3><p>実際のモデルで動作を確認し、抽出したデータで計算結果を繰り返し検証します。</p></div><div class="ar-test__grid"><div class="ar-flow ar-flow--g"><h4><em>1</em>モデル連携テスト<small>Integration Test</small></h4><p>現在のBIMモデルで指定部材を検査します。</p><div class="ar-steps"><div class="ar-step "><svg class="ar-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2h9l5 5v15H6zM14 2v6h6M9 13h8M9 17h8"/></svg><b>テスト設定</b><span>対象部材の指定<br>検査条件の設定</span></div><i class="ar-ln ar-ln--r ar-arrow" aria-hidden="true"></i><div class="ar-step ar-dash"><svg class="ar-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6l9-5 9 5v12l-9 5-9-5zM3 6l9 5 9-5M12 11v12"/></svg><b>連携モジュール実行</b><span>部材取得 · 形状解析<br>計算実行 · 結果生成</span></div><i class="ar-ln ar-ln--r ar-arrow" aria-hidden="true"></i><div class="ar-step "><svg class="ar-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 12l3 3 5-6"/></svg><b>検査結果</b><span>判定結果<br>比較情報</span></div></div></div><div class="ar-flow ar-flow--p"><h4><em>2</em>回帰テスト<small>Regression Test</small></h4><p>保存したデータで、BIMなしに計算を再実行します。</p><div class="ar-steps"><div class="ar-step "><svg class="ar-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="4"/><path d="M3 5v14c0 5 18 5 18 0V5M3 12c0 5 18 5 18 0"/></svg><b>テストデータ (JSON)</b><span>部材形状 · 属性<br>計算条件 · 観察記録</span></div><i class="ar-ln ar-ln--r ar-arrow" aria-hidden="true"></i><div class="ar-step ar-dash"><svg class="ar-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M1 12h4M19 12h4M4 4l3 3M17 17l3 3M4 20l3-3M17 7l3-3"/></svg><b>計算エンジン (オフライン)</b><span>保存された入力で<br>計算ロジックを再実行</span></div><i class="ar-ln ar-ln--r ar-arrow" aria-hidden="true"></i><div class="ar-step "><svg class="ar-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 12l3 3 5-6"/></svg><b>比較結果</b><span>基準結果と比較<br>変化の有無を確認</span></div></div></div><div class="ar-bridge" aria-hidden="true"><span>必要に応じてテストデータを抽出 (JSON)</span></div></div></section></section><section class="section growth" id="growth" aria-labelledby="growth-title"><div class="wrap">
+    <header class="section__head">
+      <div class="section__id"><span class="section__num">10</span><span class="eyebrow">Growth</span></div>
+      <h2 class="section__title" id="growth-title">行き詰まるたびに、一段上へ上がりました</h2>
+      <p class="section__sub">Excel → VBA · Power Query → Macro → Application → Platform</p>
+    </header>
+  <p class="growth-lead">ツールを先に学んで使い道を探したのではなく、解決すべき問題から出発し、<br>必要なツールを探して身につけました。</p>
+
+  <div class="growth-columns">
+    <span></span>
+    <span>取り組み</span>
+    <span>ぶつかった壁</span>
+  </div>
+
+  <div class="growth-row">
+    <div class="growth-when"><span>2023.05</span><i>~</i><span>2025.10</span></div>
+    <div class="growth-did">
+      <h3>Excel 数式</h3>
+      <p>部材マークの照合チェック · マーク自動採番</p>
+    </div>
+    <div class="growth-wall">
+      <b>数式ではこれ以上進めない</b>
+      機能が増えるにつれ、Excel関数では再計算速度と保守性に限界が見えてきました。初めて「問題ではなく、ツールそのものを変えるべきではないか」と考えました。
+    </div>
+  </div>
+
+  <div class="growth-row">
+    <div class="growth-when"><span>2025.10</span><i>~</i><span>2025.10</span></div>
+    <div class="growth-did">
+      <h3>VBA · Power Query</h3>
+      <p>数式チェックをVBAプログラムへ移行 · 最新の入力ファイルを自動取得</p>
+    </div>
+    <div class="growth-wall">
+      <b>表にない値は作れない</b>
+      溶接開先部の角度を、Teklaが出力する部材データ表と三角関数で計算しようとしましたが、失敗しました。表にあるのは座標と基本角度だけで、3D形状の計算に必要な面の向きの情報がありませんでした。性能ではなく、情報の限界でした。
+    </div>
+  </div>
+
+  <div class="growth-row growth-pivot">
+    <div class="growth-when"><span>2025.10</span><i>~</i><span>2026.01</span></div>
+    <div class="growth-did">
+      <h3>Tekla マクロ</h3>
+      <p>モデルの面と向きを直接解析 · モデルチェックの自動化</p>
+    </div>
+    <div class="growth-wall">
+      <b>表を加工する代わりに、BIMモデルへ直接アクセスする</b>
+      Excelを離れ、初めてC#でBIMソフトウェアのAPIを扱い始めました。書き出したデータを受け取って加工する方式から、モデル内の3D形状を直接読み取って計算する方式へ変わりました。
+    </div>
+  </div>
+
+  <div class="growth-row">
+    <div class="growth-when"><span>2026.01</span><i>~</i><span>2026.02</span></div>
+    <div class="growth-did">
+      <h3>独立アプリケーション</h3>
+      <p>機能統合 · 配布とアップデート管理</p>
+    </div>
+    <div class="growth-wall">
+      <b>機能が増えるほど管理が難しい構造</b>
+      当時の単一ファイル中心のマクロ構成では、機能の分離やテスト · 配布管理が難しく、独立アプリケーションへ移行しました。
+    </div>
+  </div>
+
+  <div class="growth-row">
+    <div class="growth-when"><span>2026.02</span><i>~</i><span>2026.08</span></div>
+    <div class="growth-did">
+      <h3>幾何計算エンジン</h3>
+      <p>3D形状の判断を座標 · 方向 · 領域の計算へ変換</p>
+    </div>
+    <div class="growth-wall">
+      <b>自動化の対象が、操作から判断へ</b>
+      繰り返し操作を減らすだけでなく、人が形状を見て下していた判断を計算に置き換える必要がありました。
+    </div>
+  </div>
+
+  <div class="growth-row growth-last">
+    <div class="growth-when"><span>2026.08</span><i>~</i><span>現在</span></div>
+    <div class="growth-did">
+      <h3>プラットフォーム構造</h3>
+      <p>外部プログラム連携と計算ロジックの役割分離</p>
+    </div>
+    <div class="growth-wall">
+      <b>APIコードと計算ロジックの結合</b>
+      APIに依存するコードと計算ロジックが混ざり、保守 · 検証 · 拡張が難しくなり始めました。計算エンジンを分離した理由です。
+    </div>
+  </div>
+
+
+  <div class="growth-close">
+    行き詰まるたびに、まずそれが方法の問題なのかツールの限界なのかを見極め、ツールの限界であれば一段上のツールを探して身につけました。
+  </div>
+
+</div></section><section class="section section--panel" id="about"><div class="wrap"><header class="section__head"><div class="section__id"><span class="section__num">11</span><span class="eyebrow">About</span></div><h2 class="section__title">課題を見つける人と、開発する人が同じ</h2><p class="section__sub">現場の課題発見から配布 · 運用まで</p></header><div class="about-layout"><div class="venn-panel">
+        <svg class="profile-venn" viewBox="0 0 560 500" role="img" aria-label="IT開発、建築鉄骨、Tekla実務の3領域が重なるベン図">
+          <defs>
+            <clipPath id="profile-venn-left"><circle cx="205" cy="330" r="135"/></clipPath>
+            <clipPath id="profile-venn-overlap" clip-path="url(#profile-venn-left)"><circle cx="355" cy="330" r="135"/></clipPath>
+          </defs>
+          <g class="venn-rings">
+            <circle class="venn-ring" cx="280" cy="190" r="135"/>
+            <circle class="venn-ring" cx="205" cy="330" r="135"/>
+            <circle class="venn-ring" cx="355" cy="330" r="135"/>
+          </g>
+          <circle class="venn-core" cx="280" cy="190" r="135" clip-path="url(#profile-venn-overlap)"/>
+          <g class="venn-copy venn-copy--top" text-anchor="middle">
+            <text class="venn-kicker" x="280" y="108">SOFTWARE</text>
+            <text class="venn-title" x="280" y="136">IT開発</text>
+            <text class="venn-desc" x="280" y="159">コーディング · ソフトウェア設計</text>
+          </g>
+          <g class="venn-copy venn-copy--left" text-anchor="middle">
+            <text class="venn-kicker" x="157" y="335">DOMAIN</text>
+            <text class="venn-title" x="157" y="363">建築鉄骨</text>
+            <text class="venn-desc" x="157" y="389"><tspan x="157">鉄骨の知識</tspan><tspan x="157" dy="21">実務の理解</tspan></text>
+          </g>
+          <g class="venn-copy venn-copy--right" text-anchor="middle">
+            <text class="venn-kicker" x="403" y="335">PRACTICE</text>
+            <text class="venn-title" x="403" y="363">Tekla実務</text>
+            <text class="venn-desc" x="403" y="389"><tspan x="403">モデリング</tspan><tspan x="403" dy="21">チェック · 修正</tspan></text>
+          </g>
+        </svg>
+      </div><div class="about-role"><p class="profile-statement">実務で直面した問題を、<br>計算できる問題に変えます。</p><ol class="ownership-flow"><li><span>01</span>現場の課題発見</li><li><span>02</span>要件定義</li><li><span>03</span>業務判断基準の整理</li><li><span>04</span>幾何計算·アルゴリズム設計</li><li><span>05</span>C#開発 · WPFユーザー画面</li><li><span>06</span>Teklaモデル·図面連携</li><li><span>07</span>テスト · 実モデル検証</li><li><span>08</span>配布 · アップデート管理</li></ol></div></div><div class="about-stack"><h3 class="subhead">Technical Skills<small>活用技術と実装力</small></h3><div class="stack-groups"><section class="stack-group stack-group--tech"><h4>活用技術</h4><dl class="stack-list"><div><dt>開発</dt><dd>C# · WPF · .NET Framework</dd></div><div><dt>BIM / CAD</dt><dd>Tekla Structures · AutoCAD<br>Tekla Open API — モデル·図面連携</dd></div><div><dt>開発·配布ツール</dt><dd>Git · Velopack</dd></div></dl></section><section class="stack-group stack-group--skill"><h4>実装力</h4><dl class="stack-list"><div><dt>3D幾何処理</dt><dd>座標系変換 · 投影 · 交差計算<br>接合関係の解析 · 加工形状の算出</dd></div><div><dt>ソフトウェア設計</dt><dd>BIM連携部·計算ロジックの分離<br>モジュール化 · ジョブ実行·状態管理</dd></div></dl></section></div></div></div></section><section class="section" id="closing"><div class="wrap"><header class="section__head"><div class="section__id"><span class="section__num">12</span><span class="eyebrow">Contact</span></div></header><div class="closing-layout"><div class="closing-message"><h2>現場を理解し、<br>実際に使われるツールを作ります。</h2><p>鉄骨BIM自動化の実装·検証·運用の経験を活かし、<br>設計·製作を支えるソフトウェア開発に貢献したいと考えています。</p></div><div class="closing-card"><strong>イ・ジョンオン</strong><span class="closing-en">LEE JEONGEON</span><p class="closing-role">BIM / CAD Automation<br>Digital Engineering</p><button type="button" class="closing-contact" data-copy="dlwjddjs12345@naver.com" aria-label="メールアドレスをコピー">dlwjddjs12345@naver.com<span class="closing-copy" aria-live="polite">コピー</span></button><p class="closing-note">現在、大阪に在住しています。<br>ご連絡はメールでお願いいたします。</p><a class="closing-site" href="https://leejeongeon.com"><img src="/assets/images/qr-site.svg" width="33" height="33" alt="leejeongeon.com QRコード"><span><small>Webポートフォリオ</small>leejeongeon.com</span></a></div></div></div></section></main><footer class="footer"><div class="wrap footer__row"><p>FUTURE · BIM Engineering Platform</p></div></footer></body></html>

@@ -1,5 +1,11 @@
 import { demos } from './media.js';
 
+// Strings set from script. The page language comes from <html lang>; the Japanese page is generated from index.html.
+const text = {
+  ko: { before: '가공 전', after: '가공 후', video: '기능 구현 영상', play: '영상 재생', preparing: '영상 준비 중', preparingLong: '영상을 준비하고 있습니다…', reload: '영상 다시 불러오기', reloadShort: '다시 불러오기', watch: '전체 구현 영상 보기', watchAlt: '클릭하여 전체 구현 영상 보기', qr: '구현 영상 QR 코드', copied: '복사됨', copyFailed: '복사 실패' },
+  ja: { before: '加工前', after: '加工後', video: '機能実装動画', play: '動画を再生', preparing: '動画を準備中', preparingLong: '動画を準備しています…', reload: '動画を再読み込み', reloadShort: '再読み込み', watch: '実装動画を見る', watchAlt: 'クリックして実装動画を見る', qr: '実装動画 QRコード', copied: 'コピーしました', copyFailed: 'コピー失敗' },
+}[document.documentElement.lang === 'ja' ? 'ja' : 'ko'];
+
 // Reusable on TRACE, AJAS and PLOT. Range inputs support pointer, touch and keyboard.
 export function initComparisons(root = document) {
   root.querySelectorAll('[data-comparison]').forEach(component => {
@@ -7,7 +13,7 @@ export function initComparisons(root = document) {
     const set = () => {
       const value = Number(range.value);
       component.style.setProperty('--split', `${value}%`);
-      range.setAttribute('aria-valuetext', `가공 전 ${value}%, 가공 후 ${100-value}%`);
+      range.setAttribute('aria-valuetext', `${text.before} ${value}%, ${text.after} ${100-value}%`);
     };
     range.addEventListener('input', set);
     set();
@@ -28,7 +34,7 @@ export function initDemos(root = document) {
       video.playsInline = true;
       video.preload = 'none';
       video.poster = media.poster;
-      video.setAttribute('aria-label', '기능 구현 영상');
+      video.setAttribute('aria-label', text.video);
       screen.querySelector('.demo-empty')?.remove();
       screen.classList.add('video-ready');
       screen.append(video);
@@ -36,13 +42,13 @@ export function initDemos(root = document) {
         const loadButton = document.createElement('button');
         loadButton.className = 'demo-load-button';
         loadButton.type = 'button';
-        loadButton.setAttribute('aria-label', `${media.name} 영상 재생`);
+        loadButton.setAttribute('aria-label', `${media.name} ${text.play}`);
         loadButton.textContent = '▶';
         loadButton.addEventListener('click', async () => {
           loadButton.disabled = true;
           loadButton.classList.add('is-loading');
-          loadButton.setAttribute('aria-label', `${media.name} 영상 준비 중`);
-          loadButton.textContent = '영상을 준비하고 있습니다…';
+          loadButton.setAttribute('aria-label', `${media.name} ${text.preparing}`);
+          loadButton.textContent = text.preparingLong;
           try {
             const response = await fetch(media.src);
             if (!response.ok) throw new Error('Video download failed');
@@ -54,8 +60,8 @@ export function initDemos(root = document) {
           } catch {
             loadButton.disabled = false;
             loadButton.classList.remove('is-loading');
-            loadButton.setAttribute('aria-label', `${media.name} 영상 다시 불러오기`);
-            loadButton.textContent = '다시 불러오기';
+            loadButton.setAttribute('aria-label', `${media.name} ${text.reload}`);
+            loadButton.textContent = text.reloadShort;
           }
         });
         screen.append(loadButton);
@@ -67,19 +73,19 @@ export function initDemos(root = document) {
       const link = document.createElement('a');
       link.className = 'print-demo';
       link.href = media.url;
-      link.setAttribute('aria-label', '전체 구현 영상 보기');
+      link.setAttribute('aria-label', text.watch);
       const image = new Image();
       image.src = media.poster;
-      image.alt = '클릭하여 전체 구현 영상 보기';
+      image.alt = text.watchAlt;
       link.append(image);
       const label = document.createElement('span');
-      label.textContent = '전체 구현 영상 보기 ↗';
+      label.textContent = `${text.watch} ↗`;
       link.append(label);
       if (media.qr) {
         const qr = new Image();
         qr.className = 'print-demo__qr';
         qr.src = media.qr;
-        qr.alt = `${media.name} 구현 영상 QR 코드`;
+        qr.alt = `${media.name} ${text.qr}`;
         link.append(qr);
         const address = document.createElement('small');
         address.textContent = media.url.replace(/^https?:\/\//, '');
@@ -130,9 +136,18 @@ document.querySelectorAll('[data-copy]').forEach(button => {
       ok = document.execCommand('copy');
       field.remove();
     }
-    hint.textContent = ok ? '복사됨' : '복사 실패';
+    hint.textContent = ok ? text.copied : text.copyFailed;
     button.classList.toggle('is-copied', ok);
     clearTimeout(timer);
     timer = setTimeout(() => { hint.textContent = idle; button.classList.remove('is-copied'); }, 1800);
+  });
+});
+
+// Language switch: land on the same section in the other language.
+document.querySelectorAll('.nav__lang-link').forEach(link => {
+  link.addEventListener('click', () => {
+    const navHeight = document.querySelector('.nav').offsetHeight;
+    const current = [...document.querySelectorAll('main > section')].find(section => section.getBoundingClientRect().bottom > navHeight + 1);
+    link.hash = current && current.id !== 'cover' ? current.id : '';
   });
 });
