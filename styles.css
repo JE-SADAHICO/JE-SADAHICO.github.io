@@ -1163,3 +1163,8 @@ html.pdf[lang="ja"] .print-demo::after{content:'↑ 動画再生'}
 html[lang="ja"] .cover__title{font-size:clamp(2.2rem,4.1vw,3.6rem);white-space:nowrap}
 @media(min-width:1101px){html[lang="ja"] .stack-groups{grid-template-columns:minmax(0,3fr) minmax(0,2fr);justify-content:stretch;gap:0 var(--s-6)}html[lang="ja"] .about-stack .stack-group--tech .stack-list{grid-template-columns:minmax(0,1fr) minmax(0,1.3fr) minmax(0,.7fr);justify-content:stretch}html[lang="ja"] .about-stack .stack-group--skill .stack-list{grid-template-columns:repeat(2,minmax(0,1fr));justify-content:stretch}html[lang="ja"] .about-stack .stack-list dd{white-space:normal}}
 html.pdf[lang="ja"] .stack-groups{grid-template-columns:minmax(0,3fr) minmax(0,2fr);justify-content:stretch}html.pdf[lang="ja"] .about-stack .stack-group--tech .stack-list{grid-template-columns:minmax(0,1fr) minmax(0,1.3fr) minmax(0,.7fr);justify-content:stretch}html.pdf[lang="ja"] .about-stack .stack-group--skill .stack-list{grid-template-columns:repeat(2,minmax(0,1fr));justify-content:stretch}html.pdf[lang="ja"] .about-stack .stack-list dd{white-space:normal}
+/* Japanese line breaking: break only at phrase boundaries (<wbr> inserted by scripts/i18n.mjs), spaces and punctuation. */
+html[lang="ja"] body,html[lang="ja"] .section__tagline,html[lang="ja"] .trace-layout p,html[lang="ja"] .trace-layout dd{word-break:keep-all;overflow-wrap:anywhere;line-break:strict}
+html[lang="ja"] :is(h1,h2,h3,h4,.feature-statement,.trace-bridge){text-wrap:balance}
+html[lang="ja"] .closing-note{display:none}
+@media(min-width:901px){html[lang="ja"] #overview .section__title{grid-column:span 9}html[lang="ja"] #overview .section__sub{grid-column:span 3}}
