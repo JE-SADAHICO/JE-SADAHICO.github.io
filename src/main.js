@@ -154,3 +154,28 @@ document.querySelectorAll('.nav__lang-link').forEach(link => {
     link.hash = current && current.id !== 'cover' ? current.id : '';
   });
 });
+
+// Phones: keep "A · B" lists from breaking at the dot, so no line ends with a dangling separator.
+if (matchMedia('(max-width: 760px)').matches) {
+  const walker = document.createTreeWalker(document.querySelector('main'), NodeFilter.SHOW_TEXT);
+  for (let node = walker.nextNode(); node; node = walker.nextNode()) {
+    // Narrow diagram cells need every break they can get.
+    if (node.nodeValue.includes(' · ') && !node.parentElement.closest('.modmap, .ar-diagram, .ar-test')) node.nodeValue = node.nodeValue.replaceAll(' · ', ' · ');
+  }
+  // Headlines: each sentence (split at <br>) becomes its own block so it is balanced on its own,
+  // instead of the longest sentence fixing the width for all of them.
+  document.querySelectorAll('.feature-statement, .closing-message h2, .cover__title').forEach(headline => {
+    const lines = [[]];
+    [...headline.childNodes].forEach(node => {
+      if (node.nodeName === 'BR' && !node.classList.contains('m-only')) lines.push([]);
+      else lines[lines.length - 1].push(node);
+    });
+    if (lines.length < 2) return;
+    headline.replaceChildren(...lines.map(nodes => {
+      const line = document.createElement('span');
+      line.className = 'headline-line';
+      line.append(...nodes);
+      return line;
+    }));
+  });
+}

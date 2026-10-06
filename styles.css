@@ -1168,3 +1168,20 @@ html[lang="ja"] body,html[lang="ja"] .section__tagline,html[lang="ja"] .trace-la
 html[lang="ja"] :is(h1,h2,h3,h4,.feature-statement,.trace-bridge){text-wrap:balance}
 html[lang="ja"] .closing-note{display:none}
 @media(min-width:901px){html[lang="ja"] #overview .section__title{grid-column:span 9}html[lang="ja"] #overview .section__sub{grid-column:span 3}}
+/* Mobile pass: module order (headline, video, then the rest), one-line fact row, calmer line breaks. */
+@media(max-width:760px){
+  :is(#kais,#projects,#ajas,#rnd)>.wrap{display:flex;flex-direction:column}
+  .kais-idea,.kais-idea>div:first-child,.kais-evidence{display:contents}
+  :is(#kais,#projects,#ajas,#rnd) .section__head{order:-3}
+  .kais-idea .feature-statement{order:-2;margin-bottom:20px}
+  :is(#kais,#projects,#ajas,#rnd) figure[data-demo]{order:-1;margin:0 0 26px}
+  .kais-idea .kais-steps{margin:26px 0 30px}
+  .kais-weld{gap:10px;white-space:nowrap;font-size:min(14px,3.5vw)}.kais-weld span{font-size:min(12px,3.1vw)}
+  .nav__list{gap:10px}.nav__list a{font-size:10px;letter-spacing:.04em}
+  :is(h1,h2,h3,h4,.feature-statement,.trace-bridge,.closing-message h2,.kais-steps b){text-wrap:balance}
+  :is(p,dd,li,figcaption):not(.feature-statement,.trace-bridge){text-wrap:pretty}
+}
+@media(max-width:760px){.m-only{display:none!important}}
+.nb{white-space:nowrap}
+@media(max-width:760px){html[lang="ja"] .feature-statement{font-size:23px}}
+.headline-line{display:block;text-wrap:balance}
