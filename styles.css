@@ -1185,3 +1185,5 @@ html[lang="ja"] .closing-note{display:none}
 .nb{white-space:nowrap}
 @media(max-width:760px){html[lang="ja"] .feature-statement{font-size:23px}}
 .headline-line{display:block;text-wrap:balance}
+/* <wbr> breaks even inside nowrap text, so the bridge label drops them to stay on one line. */
+.ar-bridge span wbr{display:none}
