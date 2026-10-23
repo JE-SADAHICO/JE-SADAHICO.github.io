@@ -1187,3 +1187,9 @@ html[lang="ja"] .closing-note{display:none}
 .headline-line{display:block;text-wrap:balance}
 /* <wbr> breaks even inside nowrap text, so the bridge label drops them to stay on one line. */
 .ar-bridge span wbr{display:none}
+
+/* About: the step number keeps its width and never breaks when the label wraps. */
+.ownership-flow span{flex:none;white-space:nowrap}
+/* Between the one-column breakpoint and wide screens the two step columns get narrow; tighten them so labels stay on one line. */
+@media(max-width:960px){.about-layout{grid-template-columns:1fr;gap:36px}}
+@media(min-width:961px) and (max-width:1180px){.about-role .ownership-flow{gap:0 14px}.about-role .ownership-flow li{font-size:13.5px;gap:10px;letter-spacing:-.01em}}
